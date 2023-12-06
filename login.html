@@ -52,10 +52,10 @@
                     <div class="text-center welcome">
                         <img src="img/logo.png" class="custom-logo" alt="">
                         <h1>Selamat Datang Di ERC</h1>
+                        <p class="text-black">Silahkan masukan user.</p>
                     </div>
 
                     <p class="text-center text-black info $(if error)alert$(endif)">
-                        Silahkan masukan user.
                         $(if error == "") $(if trial == 'yes')<br />Free trial
                         available, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">click
                             here</a>.$(endif)
