@@ -49,24 +49,24 @@
                     <input type="hidden" name="popup" class="form-control" value="true" />
 
                     <!-- logo -->
-                    <div class="text-center welcome">
+                    <div class='text-center welcome $(if error)mb-3$(endif) $(if error == "")mb-4$(endif)'>
                         <img src="img/logo.png" class="custom-logo" alt="">
                         <h1>Selamat Datang Di ERC</h1>
                         <p class="text-black">Silahkan masukan user.</p>
                     </div>
 
-                    <p class="text-center text-black info $(if error)alert$(endif)">
+                    <!-- <p class="mb-2 text-center text-black info $(if error)alert$(endif)">
                         $(if error == "") $(if trial == 'yes')<br />Free trial
                         available, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">click
                             here</a>.$(endif)
                         $(endif)
+                    </p> -->
 
-                        $(if error)
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Error!</strong> $(error).
-                        </div>
-                        $(endif)
-                    </p>
+                    $(if error)
+                    <div class="alert alert-danger alert-dismissible fade show mt-1" role="alert">
+                        <strong>Error!</strong> $(error).
+                    </div>
+                    $(endif)
                     
                     <label>
                         <img class="ico" src="img/user.svg" alt="#" />
